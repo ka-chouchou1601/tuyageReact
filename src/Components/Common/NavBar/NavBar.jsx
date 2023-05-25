@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import Dropdown from './Dropdown';
 import { Container} from './NavBarStyle';
 import  logo1  from "../../../Pictures/logo1.svg";
 import facebook from "../../../Pictures/facebook.svg";
@@ -6,9 +7,10 @@ import instagram from "../../../Pictures/instagram.svg";
 import twitter from "../../../Pictures/twitter.svg";
 import France45 from "../../../Pictures/France45.svg";
 import chevron from "../../../Pictures/chevron.svg";
-const NavBar = () => {
-  const [colorChange, setColorChange] = useState(false);
 
+
+const NavBar = (props) => {
+  const [colorChange, setColorChange] = useState(false);
   const changeNavBarColor = () => {
     if (window.scrollY >= 90) {
       setColorChange(true);
@@ -37,7 +39,7 @@ const NavBar = () => {
           >
             <img src={logo1} alt="" />
           </a>
-         <button className="report_button">Report a case</button>
+          <button className="report_button">Report a case</button>
         </div>
         <nav className={colorChange ? "navbar colorChange" : "navbar"}>
           <div className="navContainer">
@@ -71,7 +73,9 @@ const NavBar = () => {
                 </a>
               </li>
               <li className="navItem">
-                <a className="">Contact us</a>
+                <a className= {
+                    linkColorChange ? "navLinks linkColorChange" : "navLinks"
+                  }>Contact us</a>
               </li>
 
               <div className="socials">
@@ -92,17 +96,18 @@ const NavBar = () => {
                   </a>
                 </li>
                 <div className="translate">
-                  <li>
+                  {/* <li>
                     <a className="france45" href="#">
                       <img src={France45} alt="" />
                     </a>
-                  </li>
-                  <li className="chevron">
+                  </li>  */}
+                   {/* <li className="chevron">
                     <a>FR</a>
                     <a className="chevron_down" href="#">
                       <img src={chevron} alt="" />
                     </a>
-                  </li>
+                  </li>  */}
+                 <Dropdown/>
                 </div>
               </div>
             </div>

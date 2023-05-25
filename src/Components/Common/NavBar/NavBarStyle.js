@@ -34,12 +34,6 @@ export const Container = styled.div`
     font-size: 1.5 rem; */
     }
 
-    ${
-      "" /* margin-left: 4px;
-    font-weight: bold;
-    text-decoration: none; */
-    }
-    
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -77,7 +71,7 @@ export const Container = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
- 
+
     text-align: center;
     background-color: #ef0b0f;
     color: white;
@@ -118,11 +112,6 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
-
-    ${
-      "" /* width: 1174px;
-    height: 46px; */
-    }
   }
   .navLinks {
     color: white;
@@ -132,10 +121,9 @@ export const Container = styled.div`
     position: relative;
     left: 170px;
     right: 400px;
-    ${"" /* margin-left: 200px; */}
 
     gap: 20px;
-    width: 8rem;
+    width: 7rem;
     height: 100%;
     font-family: "Lateef";
     font-style: normal;
@@ -169,7 +157,7 @@ export const Container = styled.div`
   .facebook {
     position: relative;
     right: 6px;
-    width: 10px;
+    width: 5px;
     height: 10px;
   }
   .instagram {
@@ -193,23 +181,21 @@ export const Container = styled.div`
     width: 20px;
     height: 20px;
   }
-  .France45 {
-    width: 10px;
-    height: 10px;
-  }
-  .chevron {
+
+  ${
+    "" /* .chevron {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     position: relative;
-    top: -6px;
+    top: 10px;
     padding: 0px;
     gap: 5px;
-    width: 57px;
-    height: 24px;
+    width: 107px;
+    height: 30px;
     color: white;
   }
-  .chevron_down {
+  .country {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -218,7 +204,72 @@ export const Container = styled.div`
     padding: 0px;
     width: 57px;
     height: 24px;
-    color: white;
+    color: red;
+  }
+  
+
+  .Lang {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    background-color: white;
+    color: red;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 4px;
+    z-index: 1;
+  } */
+  }
+
+  .dropdown-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    background-color: black;
+    color: Red;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 19px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  .selected-option {
+    display: flex;
+    align-items: flex-start;
+    color: Red;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .dropdown-image {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .options {
+    position: relative;
+    top: 16px;
+    right: 50px;
+
+    list-style: none;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+  }
+
+  .option {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .option:hover {
+    background-color: #f5f5f5;
   }
 `;
-
